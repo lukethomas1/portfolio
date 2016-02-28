@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#bio {
+	
+}
+
+#intro {
+	margin: 20em auto 0 auto;
+	text-align: center;
+	height: 20%;
+}
+
+#projects {
+	margin: 15em auto 0 auto;
+}
+
+.box-button {
+	vertical-align: center;
+}
+
+.button-hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+.container-fluid {
+	width: 95vw;
+	height: 100vh;
+}
+
+.intro-box {
+	border: 1px solid white;
+}
+
+.project-box {
+	border: 1px solid white;
+}
+
+.section-header {
+	text-align: center;
+}
+
+.underline-hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
