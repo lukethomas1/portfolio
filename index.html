@@ -5,12 +5,14 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Google Fonts - Source Sans Pro 400 -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<!-- Bootstrap -->
+	<!-- <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css"> -->
 	<!-- CSS -->
 	<link rel="stylesheet" href="./index.css">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">
 	<!-- Bootstrap JS -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 	<!-- Jquery -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 	<!-- JavaScript -->
@@ -25,32 +27,44 @@
 		
 
 		<div id="intro" class="section-body">
-			<div class="col-md-3 intro-box">
+			<div id="skills-button" class="intro-box">
 				<h4 class="box-button">
-					AutoClicker 2.0
+					Skills
 				</h4>
 			</div>
 
-			<div class="col-md-1"></div>
+			<!-- <div class="col-md-1"></div> -->
 
-			<div class="col-md-4 intro-box">
-				<h4 id="bio">
-					TicTacTwist
+			<div id="bio-button" class="intro-box">
+				<h4 class="box-button">
+					Bio
 				</h4>
 			</div>
 
-			<div class="col-md-1"></div>
+			<!-- <div class="col-md-1"></div> -->
 
-			<div class="col-md-3 intro-box">
+			<div id="project-button" class="intro-box">
 				<h4 class="box-button">
-					Collatz Conjecture
+					Projects
 				</h4>
 			</div>
 		</div>
 		
 	</div>
 
-	<div class="container-fluid">
+	<div id="bio-container" class="container-fluid">
+		<div class="section-header">
+			<h1>Bio</h1>
+			<hr class="underline-hr">
+		</div>
+		
+
+		<div id="bio" class="section-body">
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore at eligendi ea, ad possimus facilis voluptatum non tenetur officia amet, laboriosam voluptatibus, vel cumque corrupti consequuntur eaque adipisci minus. Fugiat.</h3>
+		</div>
+	</div>
+
+	<div id="skills-container" class="container-fluid">
 		<div class="section-header">
 			<h1>Skills</h1>
 			<hr class="underline-hr">
@@ -62,7 +76,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid">
+	<div id="projects-container" class="container-fluid">
 		<div class="section-header">
 			<h1>Projects</h1>
 			<hr class="underline-hr">
