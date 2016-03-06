@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Luke Thomas</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google Fonts - Source Sans Pro 400 -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+	<link rel="stylesheet" href="./index.css">
+	<!-- Jquery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<!-- JavaScript -->
+	<script type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="section-header">
+			<h1>Luke Thomas</h1>
+			<hr class="underline-hr">
+		</div>
+
+        <div id="personal-statement">
+            <h3>
+                Passionate software developer and quick learner with a fascination for how things work.
+            </h3>
+        </div>
+
+		<div id="intro" class="section-body">
+			<div id="skills-button" class="intro-box">
+				<h4 class="box-button">
+					Skills
+				</h4>
+			</div>
+
+			<!-- <div class="col-md-1"></div> -->
+
+			<div id="bio-button" class="intro-box">
+				<h4 class="box-button">
+					Bio
+				</h4>
+			</div>
+
+			<!-- <div class="col-md-1"></div> -->
+
+			<div id="project-button" class="intro-box">
+				<h4 class="box-button">
+					Projects
+				</h4>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="bio-container" class="container-fluid">
+		<div class="section-header">
+			<h1>Bio</h1>
+			<hr class="underline-hr">
+		</div>
+
+
+		<div id="bio" class="section-body">
+            <h3>Luke is currently a first year student at University of California, San Diego, pursuing a degree in Computer Engineering.</h3>
+            <h3>In his free time, he likes to teach himself new coding languages and tools.</h3>
+            <h3>On the off chance Luke isn't at his desk coding, you can probably find him coding while sitting through a boring lecture, or playing basketball.</h3>
+		</div>
+	</div>
+
+	<div id="skills-container" class="container-fluid">
+		<div class="section-header">
+			<h1>Skills</h1>
+			<hr class="underline-hr">
+		</div>
+
+        <div id="logos-container">
+            <div class="logos">
+                <img class="logo" src="../assets/python_logo.png">
+                <img class="logo" src="../assets/html_css_logo.png">
+                <img class="logo" src="../assets/js_logo.png">
+                <img class="logo" src="../assets/git_logo.png">
+                <img class="logo" src="../assets/sublime_logo.png">
+                <img class="logo" src="../assets/visualstudio_logo.png">
+                <img class="logo" src="../assets/vim_logo.png">
+            </div>
+            <div class="logos">
+                <img class="logo" src="../assets/firebase_logo.png">
+                <img class="logo" src="../assets/unity_logo.png">
+            </div>
+        </div>
+
+		<div id="skills" class="section-body">
+            <h3 class="skills-text">Unix/Linux, Firebase, Bootstrap, Github</h3>
+            <h3 class="skills-text">C, C++, C#, Shell Scripting</h3>
+		</div>
+	</div>
+
+	<div id="projects-container" class="container-fluid">
+		<div class="section-header">
+			<h1>Projects</h1>
+			<hr class="underline-hr">
+		</div>
+
+
+		<div id="projects" class="section-body">
+
+
+			<div id="tictactwist-box" class="project-box">
+				<h4 class="box-header">
+					TicTacTwist
+				</h4>
+
+                <p class="project-links">
+                    <a href="https://github.com/lukethomas1/tictactwist">Github</a>
+                     |
+                    <a href="../tictactwist/tictactwist.html">Site</a>
+                </p>
+
+				<p class="box-body">
+					Simple tic tac toe game with a tiny twist. You can't see the entire board at once! Well, kind of, thanks to the minimap in the top left corner. Use arrow keys to switch squares and spacebar to choose. The goal of this project was to learn how to scroll over a web page using JavaScript, which turned into me having a little fun with it.
+				</p>
+			</div>
+
+            <div class="project-box">
+                <h4 class="box-header">
+                    Procedural Imaging
+                </h4>
+
+                <p class="project-links"><a href="https://github.com/lukethomas1/proceduralimaging">Github</a></p>
+
+                <p class="box-body">
+                    Interesting random image generating program. Choose custom settings or roll with the default, specify how many images you want and watch them be generated! This project was inspired by my increasing interest in procedural generation, specifically with relation to video games but I find all types of pseudo-random generation to be fascinating. Shoutout to Minecraft!
+                </p>
+            </div>
+
+            <div class="project-box">
+                <h4 class="box-header">
+                    SwagUpload
+                </h4>
+
+                <p class="project-links">
+                    <a href="https://github.com/lukethomas1/swagupload">Github</a>
+                     |
+                    <a href="../SwagUpload/main.html">Site</a>
+                </p>
+
+                <p class="box-body">
+                    Web page coupled with an iOS application. Uses Firebase as a lightweight backend. The user can choose an image on their phone via the iOS application and have it uploaded to our server, at which point they can navigate to our web page, enter the secret code the app gives them, and then download the image from the site.
+                </p>
+                <p class="box-body">
+                    This project was created and developed by myself and two good friends of mine, Eric Zhang and Gates Zeng, at a school-wide "Hack Day" put on by our school, University of California, San Diego. The project is currently unfinished, however enough of it works that we were able to put on a demo for the judges and win second place in the competition!
+                </p>
+            </div>
+
+            <div class="project-box">
+                <h4 class="box-header">
+                    AutoClicker 2.0
+                </h4>
+
+                <p class="project-links"><a href="https://github.com/lukethomas1/Autoclicker">Github</a></p>
+
+                <p class="box-body">
+                    This was my first project ever! I created this back in Spring of 2014, when I was a junior in high school and taking AP computer science. I enjoyed CS so much that, after having learned a decent amount of material, I decided to create a program to help me beat video games!
+                </p>
+                <p>
+                    The inspiration behind this project was a flash game on the internet, where you basically just click a whole bunch of times to win the game. Kind of lame, I know, but its fun when you have a program that can click up to 100,000 times per second! I eventually got tired of clicking on my own, so I decided to write a program to do the clicking for me. I'm still a little proud of my younger self to this day for utilizing that problem-solving mentality.
+                </p>
+            </div>
+
+			<div class="project-box">
+				<h4 class="box-header">
+					Collatz Conjecture
+				</h4>
+
+                <p class="project-links"><a href="https://github.com/lukethomas1/conjecture">Github</a> | <a href="https://en.wikipedia.org/wiki/Collatz_conjecture">Wikipedia</a></p>
+
+				<p class="box-body">
+					This one is a tad bit simpler than the rest. Its just a short script designed to test Collatz Conjecture, which I learned about in my discrete math class. You don't know what that is? Look it up, its pretty cool! I even provided you with a link.
+				</p>
+
+                <img src="../assets/collatz_joke.png" alt="There was a problem when loading this picture.">
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>

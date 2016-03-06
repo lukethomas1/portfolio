@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: green;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -11,32 +16,49 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 0 0 20em 0;
+    margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-size: 3em;
 }
 
 h4 {
 	margin: 0;
 	position: relative;
 	top: 40%;
-	font-size: 3em;
+	font-size: 2em;
 	letter-spacing: 4px;
 }
 
 #bio {
-	
+    margin: 20em 0 0 0;
 }
 
 #intro {
-	text-align: center;
 	height: 20%;
+    margin: 20em 0 0 0;
+}
+
+#personal-statement {
+    margin: 17em 0 0 0;
+    text-align: center;
+}
+
+#logos-container {
+    margin-top: 15em;
 }
 
 #projects {
-	
+    margin: 2em 0 0 0;
 }
 
 #skills {
+
+}
+
+#tictactwist-box {
 
 }
 
@@ -60,24 +82,52 @@ h4 {
 }
 
 .intro-box {
-	border: 1px solid white;
-	border-radius: 10%;
+	border: 1% solid white;
+	border-radius: 50px;
 	height: 100%;
 	float: left;
 	width: 30%;
-	margin-left: 4%;
+	margin-left: 4.7%;
 }
 
 .intro-box:first-child {
 	margin-left: 0;
 }
 
+.logo {
+    margin: auto;
+    height: 6em;
+}
+
+.logos {
+    margin: 1em auto;
+    width: 40%;
+}
+
 .project-box {
-	border: 1px solid white;
+	border: 2px solid white;
+    border-radius: 1em;
+    width: 50%;
+    margin: auto;
+    margin-top: 5em;
+    padding: 1em;
+}
+
+.project-links {
+    color: green;
+}
+
+.section-body {
+    text-align: center;
 }
 
 .section-header {
 	text-align: center;
+}
+
+.skills-text {
+    margin-top: 3em;
+    letter-spacing: 3px;
 }
 
 .underline-hr {
