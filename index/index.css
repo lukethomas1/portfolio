@@ -33,37 +33,33 @@ h4 {
 }
 
 #bio {
-    margin: 20em 0 0 0;
+    padding: 25vmin 10vmin;
+}
+
+#collatz-img {
+    width: 15vw;
 }
 
 #intro {
 	height: 20%;
-    margin: 20em 0 0 0;
+    padding: 12vmin 10vmin;
 }
 
-#personal-statement {
-    margin: 17em 0 0 0;
+#personal-statement h3 {
+    padding: 20vmin 10vmin;
     text-align: center;
+    margin: 0;
 }
 
 #logos-container {
-    margin-top: 15em;
+    width: 70%;
+    padding-top: 20vmin;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #projects {
     margin: 2em 0 0 0;
-}
-
-#skills {
-
-}
-
-#tictactwist-box {
-
-}
-
-.box-button {
-
 }
 
 .button-hover {
@@ -77,13 +73,13 @@ h4 {
 }
 
 .container-fluid {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 }
 
 .intro-box {
 	border: 1% solid white;
-	border-radius: 50px;
+	border-radius: 1em;
 	height: 100%;
 	float: left;
 	width: 30%;
@@ -96,12 +92,11 @@ h4 {
 
 .logo {
     margin: auto;
-    height: 6em;
+    height: 10vh;
 }
 
 .logos {
-    margin: 1em auto;
-    width: 40%;
+
 }
 
 .project-box {
