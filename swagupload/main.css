@@ -1,0 +1,19 @@
+.centered {
+	 text-align: center;
+}
+
+.header {
+	font-size: 2em;
+	letter-spacing: 5px;
+    padding-top: 5%;
+}
+
+.top-spacing {
+	padding-top: 4vh;
+}
+
+#code-container {
+    display: block;
+    color: blue;
+    padding-top: 10vh;
+}

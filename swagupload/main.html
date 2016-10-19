@@ -1,8 +1,3 @@
-<!--
-Author: Luke Thomas
-Date: January 30
- -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,39 +7,57 @@ Date: January 30
 	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha256-AbCXzDgd7Vj/2JrsXgjrLdYZ92AgN262cXvQr4tAQa4= sha512-cA2CLCEXBR7hnXGgSNa+TaQ7WT2zW1IVm6uCLcu3ebHNhy+VIudw9kwgHlcL57wCiiXLZ1x7yT5Mv3QkDO2XZA==" crossorigin="anonymous">
 
 	<!-- Link Local Css to Override Bootstrap when necessary -->
-	<link rel="stylesheet" type="text/css" href="./overridebootstrap.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 
 	<!-- Link Bootstrap JS -->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 
+    <!-- Jquery -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 
-	<script type="text/javascript" src="./main.js"></script>
+    <!-- Javascript -->
+	<script type="text/javascript" src="main.js"></script>
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+
+    <!-- Noty - Jquery Notification Plugin -->
+    <script type="text/javascript" src="./noty-2.3.8/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="animate.css">
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyApOAG3EeyP8NLdSHrl2n4Snl0Z2R7d2UM",
+        authDomain: "swagupload-494e7.firebaseapp.com",
+        databaseURL: "https://swagupload-494e7.firebaseio.com",
+        storageBucket: "swagupload-494e7.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
 </head>
+
 <body>
 	<div class = "container top-spacing">
-
 		<div class = "header centered">
 			<h1 class = "header">Swag Load</h1>
 		</div>
 
 		<div class="centered">
 			<div class="col-lg-4 col-md-4 col-sm-3"></div>
-
-			<div class="col-lg-4 col-md-4 col-sm-6 top-spacing">
-				<form id="code-submit" onsubmit="codesubmit()" autocomplete="off" class="form-inline">
-				  <div class="form-group">
-				    <input type="text" id="code-value"class="form-control" id="exampleInputName2" placeholder="Secret Code">
-				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
-				</form>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+                <div id="code-container">
+                    <div class="form-inline">
+        			    <input type="text" id="code-text" class="form-control" placeholder="Secret Code">
+        			    <button id="btn-submit" type="button" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
 			</div>
 
-			<div class="col-lg-4 col-md-4 col-sm-3"></div>
-		</div>
-	</div>
-
-
+            <div class="col-lg-4 col-md-4 col-sm-3"></div>
+        </div>
+    </div>
 </body>
 </html>

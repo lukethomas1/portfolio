@@ -6,9 +6,9 @@ a {
 body {
 	margin: 0;
 	padding: 0;
-	color: white;
-	background-color: black;
+	color: #330033;f
 	font-family: 'Source Sans Pro';
+    font-size: 1.8vmin;
 }
 
 hr {
@@ -72,9 +72,11 @@ h4 {
     margin: 2em 0 0 0;
 }
 
+/*
 .box-button {
     margin: 0 30%;
 }
+*/
 
 .button-hover h4 {
 	color: black;
@@ -95,7 +97,7 @@ h4 {
 
 /* This needs to be after intro-box*/
 .button-hover {
-    background-color: white;
+    background-color: black;
     color: black;
     cursor: pointer;
 }
@@ -146,4 +148,12 @@ h4 {
 
 .underline-project-margin {
     margin-top: 10em;
+}
+
+.header {
+    font-size: 4vmin;
+}
+
+.content {
+    font-size: 2vmin;
 }

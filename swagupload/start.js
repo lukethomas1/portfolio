@@ -1,15 +1,26 @@
-function onlaunch() {
-	var para = document.createElement("h2");
-	var node = document.createTextNode("Your code is: " + getQueryVariable());
-	para.appendChild(node);
+$(document).ready(function() {
+    var code = getQueryVariable();
 
-	var element = document.getElementById("photo");
-	element.appendChild(para);
-}
+    var storage = firebase.storage();
 
-function getQueryVariable(variable) {
-    var path = window.location.search;
-    path = path.substring(1);
-    var number = Number(path);
-    return number;
-}
+    var imgName;
+    var img;
+
+    var db = firebase.database().ref("code");
+
+    db.once('value', function(snapshot) {
+        if(snapshot.hasChild(code.toString())) {
+            var url = snapshot.child(code).val();
+            $("#userimg").attr("src", url);
+            $("#imgsrc").attr("href", url);
+            $("#imgsrc").attr("download", "");
+        }
+    });
+
+    function getQueryVariable() {
+        var path = window.location.search;
+        path = path.substring(1);
+        var number = Number(path);
+        return number;
+    }
+});
