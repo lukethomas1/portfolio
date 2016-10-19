@@ -1,6 +1,16 @@
+/*
+ * Helpful sources
+ *
+ * http://callbackhell.com/
+ *
+ * http://stackoverflow.com/questions/11636731/
+ * handling-asynchronous-calls-firebase-in-functions
+ */
+
 $(document).ready(function() {
     // Keyup handler
     $(document).on('keydown', function(event) {
+        // If Enter key was pressed
         if(event.keyCode == 13) {
             event.preventDefault();
             submit();
@@ -8,9 +18,7 @@ $(document).ready(function() {
     });
 
     // Button click handler
-    $("#btn-submit").click(function() {
-        submit();
-    });
+    $("#btn-submit").click(submit);
 });
 
 
@@ -24,9 +32,17 @@ function submit() {
     }
 
     else {
-        inDatabase = isInFirebase(secretNumber);
+        checkFirebase(secretNumber);
+    }
+}
 
-        if(inDatabase) {
+
+function checkFirebase(secretNumber) {
+    var db = firebase.database().ref("code");
+
+    // Check firebase to see if that code is in the database
+    db.once('value', function(snapshot) {
+        if(snapshot.hasChild(secretNumber.toString())) {
             // Move to image page, add a query variable containing the code value
             window.location.href = "./start.html?" + secretNumber;
         }
@@ -34,23 +50,7 @@ function submit() {
         else {
             showError();
         }
-    }
-}
-
-
-// Checks if the number provided is in Firebase
-function isInFirebase(secretNumber) {
-    var db = firebase.database().ref("code");
-    inDatabase = false;
-
-    // Check firebase to see if that code is in the database
-    if(db.once('value', function(snapshot) {
-        if(snapshot.hasChild(secretNumber.toString())) {
-            return true;
-        }
-    })) {
-        return true;
-    }
+    });
 }
 
 
