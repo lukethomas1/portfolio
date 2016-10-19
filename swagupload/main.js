@@ -26,7 +26,6 @@ function submit() {
     else {
         inDatabase = isInFirebase(secretNumber);
 
-        alert(inDatabase)
         if(inDatabase) {
             // Move to image page, add a query variable containing the code value
             window.location.href = "./start.html?" + secretNumber;
