@@ -7,8 +7,8 @@
  * handling-asynchronous-calls-firebase-in-functions
  */
 
+// Attaches event listeners when the page is loaded
 $(document).ready(function() {
-    // Keyup handler
     $(document).on('keydown', function(event) {
         // If Enter key was pressed
         if(event.keyCode == 13) {
@@ -17,7 +17,6 @@ $(document).ready(function() {
         }
     });
 
-    // Button click handler
     $("#btn-submit").click(submit);
 });
 
@@ -26,7 +25,6 @@ $(document).ready(function() {
 function submit() {
     var secretNumber = $("#code-text").val();
 
-    // If there was no input
     if(secretNumber === undefined) {
         showError();
     }
@@ -37,20 +35,27 @@ function submit() {
 }
 
 
+// Grabs the data from Firebase and sends it off to be handled
 function checkFirebase(secretNumber) {
     var db = firebase.database().ref("code");
 
     // Check firebase to see if that code is in the database
-    db.once('value', function(snapshot) {
-        if(snapshot.hasChild(secretNumber.toString())) {
-            // Move to image page, add a query variable containing the code value
-            window.location.href = "./start.html?" + secretNumber;
-        }
+    db.once('value', handleSnapshot);
+}
 
-        else {
-            showError();
-        }
-    });
+
+// Handles the data taken from Firebase
+function handleSnapshot(snapshot) {
+    var secretNumber = $("#code-text").val();
+
+    if(snapshot.hasChild(secretNumber.toString())) {
+        // Move to image page, add a query variable containing the code value
+        window.location.href = "./start.html?" + secretNumber;
+    }
+
+    else {
+        showError();
+    }
 }
 
 
