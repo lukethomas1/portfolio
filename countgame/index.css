@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    background-color: #e6e6fa;
+    cursor: default;
+    font-family: 'Patua One', cursive;
+
+    /* Make text unable to be selected, stops highlighting while clicking */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.arrows {
+    max-width: 3.5em;
+    max-height: 3.5em;
+    display: block;
+    margin: 0 auto;
+}
+
+.idleheader {
+    float: left;
+    margin-right: 1em;
+}
+
+.smallnums {
+    text-align: center;
+}
+
+.tab {
+    float: left;
+    min-width: 33%;
+}
+
+.tabheader {
+    text-align: center;
+    display: block;
+}
+
+.togglehover {
+    background-color: black;
+    color: white;
+}
+
+#gold {
+    text-align: right;
+}
+
+#header {
+    border-bottom: solid black 2px;
+    margin-bottom: 5em;
+    background-color: #fff0f5;
+    height: 5em;
+}
+
+#idlecontrols {
+    float: right;
+    display: none;
+}
+
+#idleonoff {
+    padding: 2px;
+    border: 2px solid black;
+}
+
+#idleplusminus {
+    padding: 2px;
+    border: 2px solid black;
+}
+
+#missions {
+    float: right;
+}
+
+#name {
+    font-size: 4em;
+    margin: 0;
+    padding: 0 0 .5em 1em;
+    float: left;
+    font-family: "Shojumaru";
+    text-shadow: 4px 4px #454549;
+}
+
+#number {
+    font-size: 8em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#numsandbuttonsTab {
+    width: 33%;
+}
+
+#shoptable {
+    margin: 0 auto;
+}
+
+#user {
+    position: absolute;
+    text-align: right;
+    margin-top: 70vh;
+    margin-left: 90%;
+}
