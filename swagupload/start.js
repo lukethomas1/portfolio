@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 function loadPicture(snapshot) {
     var code = getCode();
-    console.log("got here");
 
     if(snapshot.hasChild(code.toString())) {
         var url = snapshot.child(code).val();
