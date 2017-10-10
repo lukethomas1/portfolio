@@ -1,13 +1,15 @@
 /*
-Author: Luke Thomas
-Date: 10/19/16
-
-Description: Attaches click and keydown listeners in order to submit/verify
-secret code and navigate to the image page.
-*/
+ * Helpful sources
+ *
+ * http://callbackhell.com/
+ *
+ * http://stackoverflow.com/questions/11636731/
+ * handling-asynchronous-calls-firebase-in-functions
+ */
 
 // Attaches event listeners when the page is loaded
 $(document).ready(function() {
+    // Keyup handler
     $(document).on('keydown', function(event) {
         // If Enter key was pressed
         if(event.keyCode == 13) {
@@ -16,6 +18,7 @@ $(document).ready(function() {
         }
     });
 
+    // Button click handler
     $("#btn-submit").click(submit);
 });
 
@@ -24,9 +27,11 @@ $(document).ready(function() {
 function submit() {
     var secretNumber = $("#code-text").val();
 
+    // If there was no input
     if(secretNumber === undefined) {
         showError();
     }
+
     else {
         checkFirebase(secretNumber);
     }
@@ -36,6 +41,7 @@ function submit() {
 // Grabs the data from Firebase and sends it off to be handled
 function checkFirebase(secretNumber) {
     var db = firebase.database().ref("code");
+
     // Check firebase to see if that code is in the database
     db.once('value', handleSnapshot);
 }
@@ -49,6 +55,7 @@ function handleSnapshot(snapshot) {
         // Move to image page, add a query variable containing the code value
         window.location.href = "./start.html?" + secretNumber;
     }
+
     else {
         showError();
     }
